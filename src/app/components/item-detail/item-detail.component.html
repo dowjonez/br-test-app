@@ -1,3 +1,15 @@
 <ng-container *ngIf="data as item">
-    <app-media-cell [data]="item"></app-media-cell>
+    <div class="title-header">
+        <div class="close-btn" (click)="open=false">
+            >
+        </div>
+    </div>
+    <app-map [location]="item.location"></app-map>
+
+    <div class="header-container">
+        <app-header [title]="item.name" [subtitle]="item.category"></app-header>
+    </div>
+    <p class="address" [innerText]="formatLocation(item)"></p>
+    <p class="address-2" [innerText]="item.contact.formattedPhone"></p>
+    <p class="twitter" *ngIf="item.contact.twitter != null" [innerText]="'@' +item.contact.twitter"></p>
 </ng-container>

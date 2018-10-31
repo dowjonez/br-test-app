@@ -1,6 +1,5 @@
 <ng-container *ngIf="data as item">
-    <div class="cell-container">
-        <img [src]="item.backgroundImageURL" />
+    <div class="cell-container" [style.background-image]="makeTrustedImage( item.backgroundImageURL)">
         <app-header [title]="item.name" [subtitle]="item.name"></app-header>
     </div>
 </ng-container>

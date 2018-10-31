@@ -1,3 +1,4 @@
+<app-item-detail #appItemDetail [class.open]="selectedItem != null && itemDetail.open" [data]="selectedItem"></app-item-detail>
 <ng-container *ngFor="let item of items">
-    <app-media-cell [data]="item"></app-media-cell>
+    <app-media-cell [data]="item" (click)="selectedItem=item; itemDetail.open = true"></app-media-cell>
 </ng-container>
