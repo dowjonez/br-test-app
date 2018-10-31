@@ -1,0 +1,6 @@
+<ng-container *ngIf="data as item">
+    <div class="cell-container">
+        <img [src]="item.backgroundImageURL" />
+        <app-header [title]="item.name" [subtitle]="item.name"></app-header>
+    </div>
+</ng-container>
