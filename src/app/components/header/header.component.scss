@@ -1,17 +1,22 @@
 @import '../../variables.scss';
 :host {
+    position: fixed;
+    top: 0px;
+    z-index: 4;
+    width: 100%;
+    background-color: $secondaryColor;
+    height: 80px;
+    background-image: url("/assets/icon_map@2x.png");
+    background-position: 90% 50%;
+    background-repeat: no-repeat;
+    text-align: center;
+    background-size: 40px;
+    font-family: $primaryFontBold;
+    display: block;
+    line-height: 80px;
+    color: white;
     h2 {
-        margin-bottom: 6px;
-        font-family: $primaryFontBold;
-        font-size: 16px;
-        color: white;
-    }
-    p {
-        color: white;
-        font-family: $primaryFont;
-        font-weight: 100;
-        margin-top: 0;
-        margin-bottom: 6px;
-        font-size: 12px;
+        margin: 0;
+        padding: 0;
     }
 }

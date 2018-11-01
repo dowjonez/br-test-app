@@ -1,15 +1,20 @@
 <ng-container *ngIf="data as item">
     <div class="title-header">
         <div class="close-btn" (click)="open=false">
-            >
+
         </div>
+
     </div>
     <app-map [location]="item.location"></app-map>
 
     <div class="header-container">
-        <app-header [title]="item.name" [subtitle]="item.category"></app-header>
+        <app-heading [title]="item.name" [subtitle]="item.category"></app-heading>
     </div>
-    <p class="address" [innerText]="formatLocation(item)"></p>
-    <p class="address-2" [innerText]="item.contact.formattedPhone"></p>
-    <p class="twitter" *ngIf="item.contact.twitter != null" [innerText]="'@' +item.contact.twitter"></p>
+    <div class="detail-container">
+        <ng-container *ngIf="item.contact">
+            <p class="address" [innerText]="formatLocation(item)"></p>
+            <p class="address-2" [innerText]="item.contact.formattedPhone"></p>
+            <p class="twitter" *ngIf="item.contact.twitter != null" [innerText]="'@' +item.contact.twitter"></p>
+        </ng-container>
+    </div>
 </ng-container>

@@ -1,0 +1,25 @@
+@import '../../variables.scss';
+:host {
+    display: block;
+    position: absolute;
+    z-index: 3;
+    margin-left: 12px;
+    &.align-bottom {
+        bottom: 0px;
+    }
+    h2 {
+        margin-bottom: 0px;
+        font-family: $primaryFontBold;
+        font-size: 16px;
+        color: white;
+        margin-top: 12px;
+    }
+    p {
+        color: white;
+        font-family: $primaryFont;
+        font-weight: 100;
+        margin-top: 0;
+        margin-bottom: 6px;
+        font-size: 12px;
+    }
+}

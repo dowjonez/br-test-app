@@ -6,35 +6,54 @@
     height: 100%;
     width: 100%;
     z-index: 3;
-    background: white;
     transform: translateX(-100%);
     transition: transform .3s ease-out;
+    z-index: 5;
     &.open {
         transform: translateX(0px);
     }
-    header p {
+    .detail-container {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        background: white;
+        height: 100%;
+    }
+    .title-header {}
+    heading p {
         color: white;
     }
     p {
         font-family: $primaryFont;
         font-size: 16px;
-        color: $secondaryColor;
+        color: $tertiaryColor;
         display: block;
         margin: 0 0px 26px 15px;
         letter-spacing: 1.2px;
     }
     .header-container {
-        background-color: $primaryColor;
+        background-color: $secondaryColor;
         height: 60px;
-        padding: 12px;
+        padding: 0;
         display: flex;
         align-content: center;
+        position: relative;
     }
     .close-btn {
         width: 60px;
-        height: 60px;
+        height: 80px;
         display: block;
-        background: red;
+        &:before {
+            display: flex;
+            flex: 1;
+            width: 100%;
+            height: 100%;
+            background-image: url("/assets/ic_webBack@2x.png");
+            background-repeat: no-repeat;
+            content: " ";
+            background-size: 12px;
+            background-position: center;
+        }
     }
     .address {
         line-height: 1.2;
