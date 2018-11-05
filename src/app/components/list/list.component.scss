@@ -1,6 +1,11 @@
 :host {
+    @media (min-width: 767px) {
+        flex-direction: row;
+    }
+    max-width: 100%;
+    flex-direction: column;
     margin-top: 80px;
     position: relative;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
 }
